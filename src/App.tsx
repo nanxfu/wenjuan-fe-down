@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import List from './pages/List'
+import {RouterProvider} from 'react-router'
+import List from './pages/manage/List'
 import './App.css'
+import router from './router'
 
 
 function App() {
@@ -8,10 +10,7 @@ function App() {
 
   return (
     <>
-      <div className='App'>
-        <h1>问卷FE</h1>
-        <List></List>
-      </div>
+      <RouterProvider router={router}></RouterProvider>
     </>
   )
 }
